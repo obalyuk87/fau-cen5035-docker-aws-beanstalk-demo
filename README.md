@@ -25,6 +25,8 @@ python -m pip install flask
 python server.py
 ```
 
+![FAU Pic](/static/images/fau-demo.png)
+
 ## Browse / Test it
 
 * Home: http://localhost:5000/
