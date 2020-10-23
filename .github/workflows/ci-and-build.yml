@@ -31,4 +31,3 @@ jobs:
           !.gitignore
           !scripts
           !*.md
-          !requirements.txt
