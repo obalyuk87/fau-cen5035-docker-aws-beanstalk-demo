@@ -11,7 +11,7 @@ python -m pip --version
 
 ## Install Flask
 
-What is Flask - https://flask.palletsprojects.com/en/1.1.x/
+What is Flask - https://palletsprojects.com/p/flask/
 
 ```
 pip install --no-cache-dir -r requirements.txt
