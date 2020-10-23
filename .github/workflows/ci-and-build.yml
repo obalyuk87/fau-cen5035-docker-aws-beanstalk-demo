@@ -17,5 +17,14 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
       
-    - name: Create Zip Package
-      run: zip package.zip * -r -x scripts
+    # - name: Create Zip Package
+    #  run: zip package.zip * -r -x scripts
+      
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v2
+      with: 
+        name: package
+        path: |
+          .
+          !scripts
+          !*.md
