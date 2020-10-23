@@ -26,5 +26,9 @@ jobs:
         name: package
         path: |
           .
+          !.git
+          !.github
+          !.gitignore
           !scripts
           !*.md
+          !requirements.txt
