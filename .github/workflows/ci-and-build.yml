@@ -25,7 +25,7 @@ jobs:
           !.gitignore
           !scripts
           !*.md
-          !.Dockerfile
+          !Dockerfile
 
   build_container:
     runs-on: ubuntu-latest
