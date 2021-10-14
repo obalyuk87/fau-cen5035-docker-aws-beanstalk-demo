@@ -27,13 +27,25 @@ jobs:
           !*.md
           !Dockerfile
 
-  build_container:
+  deploy: 
     runs-on: ubuntu-latest
     needs: [build]
-
     steps:
-    - uses: actions/checkout@v2
     
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      - uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - run: |
+          az webapp list --query "[?state=='Running']"
+    
+#   build_container:
+#     runs-on: ubuntu-latest
+#     needs: [build]
+
+#     steps:
+#     - uses: actions/checkout@v2
+    
+#     - name: Build the Docker image
+#       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
       
